@@ -71,7 +71,7 @@ def main():
             food_db = to_FoodDatabase(food_data)
             cal_col = food_db['calories']
             total_cals = cal_col.sum()
-            hours = int(total_cals / cals_per_hour)
+            hours = round(total_cals / cals_per_hour, 1)
             print("Total hours needed to burn calories:", hours)
 
 
